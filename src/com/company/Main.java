@@ -1,19 +1,19 @@
 package com.company;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.text.NumberFormat;
-import java.util.Date;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+//This program contains all the exercises for the Java basics - 2 programs are at the end b/c i figured out I missed them in the canvas.
+// 0 Hello World Program
+  /*      System.out.println("Hello, World!");
+        System.out.println("Today is January 21, 2020. I am alive!");
+  */
 // Scanners are used for all the programs written down.
         Scanner keyboard = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
-// 1.  Math Two tested
+/*// 1.  Math Two tested
         int myNumber = 2;
         double namedMyOhterNubmer = 1.7938;
         System.out.println("My Number = " + myNumber + "\nMy Other Number = " + namedMyOhterNubmer);
@@ -92,7 +92,6 @@ public class Main {
         double average;
         System.out.print("First number? : ");
         num1 = keyboard.nextInt();
-
         System.out.print("Second number? : ");
         num2 = keyboard.nextInt();
         sum = num1 + num2;
@@ -100,7 +99,9 @@ public class Main {
         average = sum / 2.0;
         if (sum > 200 && sum < 1000)
             System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum + "*~");
-        else {
+        else if (sum > 1000) {
+            System.out.println("The sum of  " + num1 + " and " + num2 + " is " + sum + "*");
+        } else {
             System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
         }
         System.out.println("The product of " + num1 + " and " + num2 + " is " + product);
@@ -376,8 +377,52 @@ public class Main {
 
         private static void output(String aMessage) {
             System.out.println(aMessage);
-        }
+        }*/
+// added later on 1
+  /*      for (int i = 1; i < 10; i++) {
+            System.out.println();
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+        }*/
 
+// added later on 2
+  /*      double loanAmount = 0;
+        double interestAmount = 0;
+        double monthlyPayment = 0;
+        double balance = 0;
+        int termOfLoan;
+
+        System.out.printf("Enter the loan amount: ");
+        loanAmount = keyboard.nextDouble();
+
+        System.out.printf("Enter the interest rate on the loan: ");
+        interestAmount = keyboard.nextDouble();
+
+        System.out.printf("Enter the term (years) for the loan payment: ");
+        termOfLoan = keyboard.nextInt();
+
+        System.out.printf("\n======================================\n");
+        keyboard.close();
+
+        monthlyPayment = processPayment(loanAmount, interestAmount, termOfLoan);
+        balance = -(monthlyPayment * (termOfLoan * 12));
+        System.out.format("%-30s$%-+10.2f%n", "Balance owed to bank: ", balance);
+        System.out.format("%-30s$%-+10.2f%n", "Minimum monthly payment: ", monthlyPayment);
+    }
+
+
+    public static double processPayment(double loanAmount, double interestAmount, int termOfLoan) {
+        // calculates the monthly payment
+        double rate = (interestAmount / 100) / 12;
+        double base = (1 + rate);
+        double months = termOfLoan * 12;
+        double result = 0.0;
+        result = ((rate * loanAmount) / (1 - Math.pow(base, -months)));
+
+        return result;
+    }*/
+    } // end of main
 
 // end of class
 }
